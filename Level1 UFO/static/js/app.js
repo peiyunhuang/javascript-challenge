@@ -5,7 +5,8 @@ var filteredData = data;
 var button = d3.select("#filter-btn");
 
 button.on("click", function() {
-
+// from data.js
+var filteredData = data;
 // Select the input element and get the raw HTML node
 var inputElement = d3.select("#datetime");
 
@@ -20,7 +21,7 @@ if (inputValue != ""){
   filteredData = filteredData.filter(UFOsighting=> UFOsighting.datetime === inputValue); 
 }
 if (inputValueCity!=""){
-  filteredData = filteredData.filter(UFOsighting=> UFOsighting.city === inputValuecity); 
+  filteredData = filteredData.filter(UFOsighting=> UFOsighting.city === inputValueCity); 
 
 }
 if (inputValueState != ""){
